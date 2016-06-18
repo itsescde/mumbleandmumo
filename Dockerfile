@@ -10,7 +10,7 @@ RUN useradd -u 1000 mumble \
 ADD mumble-server.ini /mumble-server.ini
 ADD supw.sh /supw.sh
 
-RUN /supw.sh
+RUN exec supw.sh
 
 VOLUME ["/data", "/config"]
 EXPOSE 64738/udp
