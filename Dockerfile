@@ -15,4 +15,4 @@ VOLUME ["/data", "/config"]
 EXPOSE 64738/udp
 
 USER mumble
-ENTRYPOINT ["/start.sh"]
+ENTRYPOINT ["/usr/sbin/murmurd", "-fg", "-ini", "/config/mumble-server.ini"]
