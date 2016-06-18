@@ -13,6 +13,8 @@ RUN git clone https://github.com/mumble-voip/mumo.git
 
 ADD mumo.ini /mumo/mumo.ini
 
+RUN python mumo.py -d
+
 VOLUME ["/data", "/config"]
 EXPOSE 64738/udp
 
