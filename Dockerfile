@@ -8,12 +8,10 @@ RUN useradd -u 1000 mumble \
  
 
 ADD mumble-server.ini /mumble-server.ini
-ADD supw.sh /supw.sh
-
-RUN exec /supw.sh
+ADD start.sh /start.sh
 
 VOLUME ["/data", "/config"]
 EXPOSE 64738/udp
 
 USER mumble
-ENTRYPOINT ["/usr/sbin/murmurd", "-fg", "-ini", "/config/mumble-server.ini"]
+ENTRYPOINT ["/start.sh"]
