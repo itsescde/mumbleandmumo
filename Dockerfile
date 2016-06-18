@@ -2,6 +2,7 @@ FROM ubuntu:16.04
 MAINTAINER ITSESCDE <schuetz@itsesc.ovh>
 
 RUN useradd -u 1000 mumble \
+ && useradd mumo \
  && apt-get update \
  && apt-get install -y mumble-server python git python-zeroc-ice \
  && mkdir /data && chown 1000 /data
