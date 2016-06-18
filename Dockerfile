@@ -9,6 +9,7 @@ RUN useradd -u 1000 mumble \
 
 ADD mumble-server.ini /mumble-server.ini
 ADD start.sh /start.sh
+RUN chmod +x start.sh
 
 VOLUME ["/data", "/config"]
 EXPOSE 64738/udp
