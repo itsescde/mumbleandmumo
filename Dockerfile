@@ -7,7 +7,7 @@ RUN useradd -u 1000 mumble \
  && mkdir /data && chown 1000 /data
  
 
-ADD mumble-server.ini /config/mumble-server.ini
+ADD mumble-server.ini /mumble-server.ini
 ADD supw.sh /tmp/supw.sh
 
 RUN /tmp/supw.sh
